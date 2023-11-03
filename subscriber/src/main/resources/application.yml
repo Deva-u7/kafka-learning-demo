@@ -4,8 +4,13 @@
 #      bootstrap-servers: localhost:9092
 #      group-id: demo
 #      auto-offset-reset: earliest
-
-
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeSerializer
+#      value-deserializer: org.springframework.kafka.support.serializer.JsonDeSerializer
+#      properties:
+#        spring:
+#          json:
+#            trusted:
+#              packages: (*)
 
 server:
   port: 8080

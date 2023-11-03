@@ -16,6 +16,9 @@ public class EventConsumer {
     @KafkaListener(topics = "test-demo",groupId = "demo")
     public void consumeEvents( String message) {
         log.info("consumer consume the events {} ",message);
+    }    @KafkaListener(topics = "test-demo1",groupId = "demo")
+    public void consumeEvents1( Object message) {
+        log.info("consumer consume the events {} ",message.toString());
     }
 }
 
