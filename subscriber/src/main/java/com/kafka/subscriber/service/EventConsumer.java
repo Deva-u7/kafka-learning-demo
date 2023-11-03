@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class EventConsumer {
     Logger log =  LoggerFactory.getLogger(EventConsumer.class);
-    @KafkaListener(topics = "test-demo")
+    @KafkaListener(topics = "test-demo",groupId = "demo")
     public void consumeEvents( String message) {
         log.info("consumer consume the events {} ",message);
     }
